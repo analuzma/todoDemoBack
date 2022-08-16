@@ -1,14 +1,13 @@
 const router = require("express").Router();
-const jwt = require("jsonwebtoken")
-//importar controlador
-const {signUpProcess, logInProcess, logOutProcess} =require("../controllers/auth.controllers")
-//middlewares
+//importar el controlador 
+const {signupProcess,loginProcess,logoutProcess} = require("../controllers/auth.controller")
+//middelwares
 
-//signup
-router.post("/signup", signUpProcess);
-//login
-router.post("/login", logInProcess);
-//logout
-router.get("/logout", logOutProcess);
+router.post("/signup", signupProcess);
 
+//login Logout
+router.post("/login",loginProcess);
+
+router.get("/logout",logoutProcess);
+//.-
 module.exports = router;
